@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://technehub-labs.github.io/dea-catalog-organizational-units/schemas/entity.schema.json",
+  "title": "OrganizationalUnit Catalog Entry",
+  "description": "Schema for entries in technehub-labs/dea-catalog-organizational-units. Mirrors technehub-labs/dea-metamodel/schemas/entities/organizational-unit.json (v1.0.0-alpha).",
+  "type": "object",
+  "required": ["id", "name", "type", "version", "ou_type", "ou_scope", "ou_lifecycle"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]*:[a-z0-9-]+$" },
+    "type": { "type": "string", "const": "OrganizationalUnit" },
+    "name": { "type": "string", "minLength": 1, "maxLength": 200 },
+    "description": { "type": "string", "maxLength": 2000 },
+    "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "ou_type": {
+      "type": "string",
+      "enum": [
+        "business-unit", "division", "department", "team",
+        "role-cluster", "virtual-team", "governance-body", "external-partner-role"
+      ]
+    },
+    "ou_scope": {
+      "type": "string",
+      "enum": ["individual", "team", "departmental", "division", "enterprise", "ecosystem"]
+    },
+    "ou_lifecycle": {
+      "type": "string",
+      "enum": ["permanent", "temporary", "ad-hoc", "sunsetting"]
+    },
+    "ecf_domain": {
+      "type": "string",
+      "enum": [
+        "governance-existence", "supply-resources", "people-organization",
+        "customer-demand", "product-offering", "operations-delivery", "finance-value"
+      ]
+    },
+    "ecf_stage": {
+      "type": "string",
+      "enum": ["conceive", "design", "build", "activate", "operate", "improve", "retire"]
+    },
+    "parent_ou": { "type": "string" },
+    "child_ous": { "type": "array", "items": { "type": "string" } },
+    "owned_capabilities": { "type": "array", "items": { "type": "string" } },
+    "owned_processes": { "type": "array", "items": { "type": "string" } },
+    "owned_objects": { "type": "array", "items": { "type": "string" } },
+    "actors": { "type": "array", "items": { "type": "string" } },
+    "stakeholders": { "type": "array", "items": { "type": "string" } },
+    "cost_center": { "type": "string", "maxLength": 100 },
+    "head_count": { "type": "integer", "minimum": 0 },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "metadata": { "type": "object" }
+  }
+}
