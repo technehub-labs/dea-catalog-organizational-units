@@ -20,7 +20,7 @@ jobs:
       # diagnostic. Three catalog CIs were affected by the same scaffold
       # bug; this PR fixes the OU side.
       - name: Validate catalog entries against OrganizationalUnit schema
-        uses: dsanders11/json-schema-validate-action@v1
+        uses: dsanders11/json-schema-validate-action@v2.1.0
         with:
           schema: schemas/entity.schema.json
           files: |
