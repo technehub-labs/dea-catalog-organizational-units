@@ -11,7 +11,7 @@ name: Customer Success Division
 ou_type: division
 ou_scope: enterprise
 ou_lifecycle: permanent
-ecf_domain: customer-demand
+ecf_domain: party-relationship
 ecf_stage: operate
 version: 1.0.0
 description: Enterprise division accountable for customer success outcomes across all customer segments.
