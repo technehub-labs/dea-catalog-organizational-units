@@ -1,0 +1,27 @@
+catalog:
+  abbreviation: DEA-
+  counts:
+    candidates: 0
+    canonical: 0
+    entities: 0
+    open_change_requests: 2
+    research_files: 0
+    retired: 0
+  cross_cutting:
+    change_requests: change-requests/
+    classifications: classifications/
+    contributions_queue: contributions/
+    schemas: schemas/
+    validators: scripts/
+  description: 'A unit of organisation that owns capabilities, runs processes, and is custodian for business objects.
+
+    '
+  entities: []
+  id: dea:catalog-organizational-units
+  metamodel_version: unknown
+  name: dea-catalog-organizational-units
+  owner: TechNeHub Labs
+  repository: https://github.com/technehub-labs/dea-catalog-organizational-units.git
+  research_registers: []
+  status: active
+  version: 0.0.0
