@@ -5,7 +5,7 @@ This directory will hold Organizational Unit catalog entries once Phase 2 conten
 Each entry should be a YAML or JSON file following the schema in `../../schemas/entity.schema.json`. Example shape:
 
 ```yaml
-id: dea:ou-customer-success-division
+id: orgunits:orgunit-customer-success-division-xxxxxx
 type: OrganizationalUnit
 name: Customer Success Division
 ou_type: division
@@ -16,16 +16,16 @@ ecf_stage: operate
 version: 1.0.0
 description: Enterprise division accountable for customer success outcomes across all customer segments.
 owned_capabilities:
-  - dea:capability-manage-account
-  - dea:capability-issue-refund
+  - capabilities:capability-manage-account-xxxxxx
+  - capabilities:capability-issue-refund-xxxxxx
 owned_processes:
-  - dea:process-customer-onboarding
-  - dea:process-refund-handling
+  - processes:process-customer-onboarding-xxxxxx
+  - processes:process-refund-handling-xxxxxx
 owned_objects:
-  - dea:object-customer-12345
+  - objects:object-customer-12345-xxxxxx
 actors:
-  - dea:actor-customer-success-manager
-  - dea:actor-account-management-team
+  - actors:actor-customer-success-manager-xxxxxx
+  - actors:actor-account-management-team-xxxxxx
 cost_center: CC-CS-001
 head_count: 42
 ```
