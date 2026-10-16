@@ -5,6 +5,10 @@ All notable changes to this catalog are recorded here. Format follows
 
 ## [Unreleased]
 
+### CR-OU-04: Entity System Stage 5-6 (Organizational Units Slice)
+
+OU slice of the General Entity System institutionalisation (cross-repo cascade T7 of the umbrella programme). New `reconciliation/entity-system-registry.yaml` (per-repo; generic; no profiles; canonical pattern `^dea:ou-[a-z0-9-]+$`). New `scripts/check_entity_system.py` (5-rule umbrella gate; copied verbatim from `dea-catalog-processes`). New `tests/test_check_entity_system.py` (32 tests; 4 pilot-specific tests made generic for cross-repo portability; all pass). New `.github/workflows/validate-entity-system.yml` (CI). Live: gate vacuously CONFORMANT (0 entities in file_globs). D-004 clean. 118a/b/c authorship gates remain CONFORMANT.
+
 ### CR-OU-03: Authorship Cardinal Rule (R1, R2) - Org-Wide Propagation Slice
 
 User directive 2026-10-13: "no `Coder` / `Agent` / agent or tool names in any
